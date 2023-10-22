@@ -1,27 +1,44 @@
 ﻿#include "TFigure.h"
 #include "TPawn.h"
+#define MAX 32
 
 using namespace std;
 
 int main()
 {
-	bool boardAtack[LEN][LEN];
-	for (int i = 0; i < LEN; i++)
-		for (int j = 0; j < LEN; j++)
-			boardAtack[i][j] = 0;
+	Board board;
 
+	TPawn bPawn1(black, 'a', 1);
+	TPawn wPawn2(white, 'a', 2);
+	TPawn wPawn3(white, 'a', 3);
+	TPawn wPawn4(white, 'a', 1);//!!!!!!!!!!
+	TPawn bPawn5(black, 'g', 4);
 
-	boardAtack[0][0] = 1;
-	TPawn a(black, 'a', 1);
-	//a.AddFigure();
+	//====================
+	TFigure* figures[MAX];
+	//-Инициализация
+	for (int i = 0; i < MAX; i++)
+		figures[i] = NULL;
+	//-
+	figures[0] = &bPawn1;
+	figures[1] = &wPawn2;
+	figures[2] = &wPawn3;
+	figures[3] = &wPawn4;
+	figures[4] = &bPawn5;
+	//====================
 
-
-	int k = LEN - 1;
-	for (int i = 0; i < LEN; i++) {
-		for (int j = 0; j < LEN; j++) {
-			cout << boardAtack[j][k] << " ";
-		}
-		--k;
-		cout << '\n';
+	for (int i = 0; i < MAX && figures[i] != NULL; i++)
+	{
+			figures[i]->AddFigure(board);
+			figures[i]->AddAtack(board);
 	}
+	
+	cout << bPawn1.Count(black) << " - Black Pawn" << endl;
+	cout << bPawn1.Count(white) << " - White Pawn" << endl;
+
+	board.PrintBoard();
+
+	cout << endl;
+
+	board.PrintBoardAtack();
 }

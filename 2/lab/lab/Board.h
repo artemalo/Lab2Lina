@@ -3,12 +3,14 @@
 #pragma once
 class Board
 {
+	friend class TFigure;
+	friend class TPawn;
 private:
 	bool boardAtack[LEN][LEN];
 	int board[LEN][LEN];
-protected:
-	virtual void AddAtack();
-	virtual void AddFigure();
+//protected:
+//	virtual void AddAtack(Board*);
+//	virtual void AddFigure(Board*);
 public:
 	Board();
 	void PrintBoardAtack();
