@@ -1,4 +1,5 @@
 ﻿#include "TFigure.h"
+#include "TPawn.h"
 
 using namespace std;
 
@@ -13,6 +14,7 @@ int main()
 	boardAtack[0][0] = 1;
 	TPawn a(black, 'a', 1);
 	//a.AddFigure();
+
 
 	int k = LEN - 1;
 	for (int i = 0; i < LEN; i++) {

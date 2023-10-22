@@ -1,6 +1,5 @@
 #pragma once
 #include "Board.h"
-#include "TPawn.h"
 
 enum Color {
 	white,
@@ -8,6 +7,7 @@ enum Color {
 };
 
 class TFigure
+	//public Board
 {
 protected:
 	int x, y;
