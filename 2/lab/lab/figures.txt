@@ -1,2 +1,5 @@
-Queen white d 4
-Queen black d 6
+Rook black h 1
+Pawn black b 7
+Pawn white e 6
+Queen white c 2
+Queen black e 2

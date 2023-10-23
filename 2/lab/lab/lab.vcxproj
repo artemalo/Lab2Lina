@@ -129,17 +129,23 @@
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="lab.cpp" />
+    <ClCompile Include="TElephant.cpp" />
     <ClCompile Include="TFigure.cpp" />
     <ClCompile Include="THorse.cpp" />
+    <ClCompile Include="TKing.cpp" />
     <ClCompile Include="TPawn.cpp" />
     <ClCompile Include="TQueen.cpp" />
+    <ClCompile Include="TRook.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Board.h" />
+    <ClInclude Include="TElephant.h" />
     <ClInclude Include="TFigure.h" />
     <ClInclude Include="THorse.h" />
+    <ClInclude Include="TKing.h" />
     <ClInclude Include="TPawn.h" />
     <ClInclude Include="TQueen.h" />
+    <ClInclude Include="TRook.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

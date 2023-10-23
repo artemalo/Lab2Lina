@@ -1,10 +1,15 @@
 ﻿#include <fstream>
 #include <map>
 #include <vector>
+
 #include "TFigure.h"
 #include "TPawn.h"
+#include "TRook.h"
 #include "THorse.h"
+#include "TElephant.h"
 #include "TQueen.h"
+#include "TKing.h"
+
 #define MAX 32
 #define filename "figures.txt"
 
@@ -32,10 +37,16 @@ int main()
 		cout << type << " " << color << " " << x << " " << y << endl;
 		if (type == "Pawn")
 			piece = new TPawn(color, x, y);
+		else if (type == "Rook")
+			piece = new TRook(color, x, y);
 		else if (type == "Horse")
 			piece = new THorse(color, x, y);
+		else if (type == "Elephant")
+			piece = new TElephant(color, x, y);
 		else if (type == "Queen")
 			piece = new TQueen(color, x, y);
+		else if (type == "King" && color == black)
+			piece = new TKing(color, x, y);
 		if (piece)
 		{
 			figures.push_back(piece);
@@ -44,6 +55,7 @@ int main()
 	f.close();
 
 	Board board;
+
 	/*for (TFigure* piece : figures)
 	{
 		piece->AddFigure(board);
@@ -58,6 +70,13 @@ int main()
 	{
 		figures[i]->AddAtack(board);
 	}
+
+	do
+	{
+		cout << "White king (x, y): ";
+		cin >> x >> y;
+	} while (!figures[0]->Empty(board, x, y));
+	TKing(white, x, y);
 
 	board.PrintBoard();
 

@@ -31,6 +31,15 @@ bool TFigure::Empty(Board& board)
 	return false;
 }
 
+bool TFigure::Empty(Board& board, char x, int y)
+{
+	int intX = x - 'a';
+	y--;
+	if (board.board[intX][y] == NULL)
+		return true;
+	return false;
+}
+
 int TFigure::Count(Color color)
 {
 	if (color == white) return w_count;
