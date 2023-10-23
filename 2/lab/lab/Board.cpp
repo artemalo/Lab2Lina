@@ -15,9 +15,11 @@ Board::Board()
 void Board::PrintBoardAtack()
 {
 	int k = LEN - 1;
-	for (int i = 0; i < LEN; i++) {
-		for (int j = 0; j < LEN; j++) {
-			std::cout << boardAtack[j][k] << "   ";
+	for (int i = 0; i < LEN; i++)
+	{
+		for (int j = 0; j < LEN; j++)
+		{
+			std::cout << boardAtack[j][k] << "  ";
 		}
 		--k;
 		std::cout << '\n';
@@ -27,9 +29,11 @@ void Board::PrintBoardAtack()
 void Board::PrintBoard()
 {
 	int k = LEN - 1;
-	for (int i = 0; i < LEN; i++) {
-		for (int j = 0; j < LEN; j++) {
-			std::cout << board[j][k] << "   ";
+	for (int i = 0; i < LEN; i++)
+	{
+		for (int j = 0; j < LEN; j++)
+		{
+			std::cout << board[j][k] << "  ";
 		}
 		--k;
 		std::cout << '\n';

@@ -12,4 +12,3 @@ public:
     void AddFigure(Board&) override;
     int Count(Color) override;
 };
-

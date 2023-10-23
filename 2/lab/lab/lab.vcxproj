@@ -132,12 +132,14 @@
     <ClCompile Include="TFigure.cpp" />
     <ClCompile Include="THorse.cpp" />
     <ClCompile Include="TPawn.cpp" />
+    <ClCompile Include="TQueen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Board.h" />
     <ClInclude Include="TFigure.h" />
     <ClInclude Include="THorse.h" />
     <ClInclude Include="TPawn.h" />
+    <ClInclude Include="TQueen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

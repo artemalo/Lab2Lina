@@ -37,14 +37,6 @@ int TFigure::Count(Color color)
 	else return b_count;
 }
 
-void TFigure::AddAtack(Board&)
-{
-}
+void TFigure::AddAtack(Board&) {}
 
-void TFigure::AddFigure(Board&)
-{
-}
-
-TFigure::~TFigure()
-{
-}
+void TFigure::AddFigure(Board&) {}

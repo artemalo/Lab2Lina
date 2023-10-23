@@ -8,7 +8,7 @@ THorse::THorse(Color color, char x, int y) : TFigure(color, x, y) {}
 void THorse::AddAtack(Board& board)
 {
 	if (OnBoard())
-		if (board.board[this->x][this->y] == 4 && w_count <= 2 || board.board[this->x][this->y] == -4 && b_count <= 2) {
+		if (/*board.board[this->x][this->y] == 4 && w_count <= 2 ||*/ board.board[this->x][this->y] == -4 && b_count <= 2) {
 			if (OnBoard(this->x + 1, this->y + 2))
 				board.boardAtack[this->x + 1][this->y + 2] = 1;
 			if (OnBoard(this->x + 2, this->y + 1))

@@ -22,5 +22,4 @@ public:
 	virtual int Count(Color color);
 	virtual void AddAtack(Board&);
 	virtual void AddFigure(Board&);
-	~TFigure();
 };

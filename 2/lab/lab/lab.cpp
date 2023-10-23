@@ -4,6 +4,7 @@
 #include "TFigure.h"
 #include "TPawn.h"
 #include "THorse.h"
+#include "TQueen.h"
 #define MAX 32
 #define filename "figures.txt"
 
@@ -33,7 +34,8 @@ int main()
 			piece = new TPawn(color, x, y);
 		else if (type == "Horse")
 			piece = new THorse(color, x, y);
-
+		else if (type == "Queen")
+			piece = new TQueen(color, x, y);
 		if (piece)
 		{
 			figures.push_back(piece);
@@ -50,11 +52,12 @@ int main()
 	for (int i = 0; i < figures.size(); i++)
 	{
 		figures[i]->AddFigure(board);
-		figures[i]->AddAtack(board);
 	}
 
-	//cout << figures[0]->Count(black) << " - Black Pawn" << endl;
-	//cout << figures[0]->Count(white) << " - White Pawn" << endl;
+	for (int i = 0; i < figures.size(); i++)
+	{
+		figures[i]->AddAtack(board);
+	}
 
 	board.PrintBoard();
 

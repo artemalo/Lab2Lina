@@ -8,20 +8,20 @@ TPawn::TPawn(Color color, char x, int y) : TFigure(color, x, y) {}
 void TPawn::AddAtack(Board& board)
 {
 	if(OnBoard())
-		if (board.board[this->x][this->y] == 2 && w_count <= LEN) {
+		/*if (board.board[this->x][this->y] == 2 && w_count <= LEN) {
 			if (OnBoard(this->x + 1, this->y + 1))
 				board.boardAtack[this->x + 1][this->y + 1] = 1;
 			if (OnBoard(this->x - 1, this->y + 1))
 				board.boardAtack[this->x - 1][this->y + 1] = 1;
 		}
-		else {
+		else {*/
 			if (board.board[this->x][this->y] == -2 && b_count <= LEN) {
 				if (OnBoard(this->x - 1, this->y - 1))
 					board.boardAtack[this->x - 1][this->y - 1] = 1;
 				if (OnBoard(this->x + 1, this->y - 1))
 					board.boardAtack[this->x + 1][this->y - 1] = 1;
 			}
-		}
+		//}
 }
 
 void TPawn::AddFigure(Board& board)
