@@ -9,16 +9,16 @@ void TPawn::AddAtack(Board& board)
 {
 	if(OnBoard())
 		if (board.board[this->x][this->y] == 2 && w_count <= LEN) {
-			if (this->x + 1 < LEN && this->x + 1 >= 0)
+			if (OnBoard(this->x + 1, this->y + 1))
 				board.boardAtack[this->x + 1][this->y + 1] = 1;
-			if (this->x - 1 < LEN && this->x + 1 >= 0)
+			if (OnBoard(this->x - 1, this->y + 1))
 				board.boardAtack[this->x - 1][this->y + 1] = 1;
 		}
 		else {
 			if (board.board[this->x][this->y] == -2 && b_count <= LEN) {
-				if (this->x - 1 < LEN && this->x - 1 >= 0)
+				if (OnBoard(this->x - 1, this->y - 1))
 					board.boardAtack[this->x - 1][this->y - 1] = 1;
-				if (this->x + 1 < LEN && this->x - 1 >= 0)
+				if (OnBoard(this->x + 1, this->y - 1))
 					board.boardAtack[this->x + 1][this->y - 1] = 1;
 			}
 		}

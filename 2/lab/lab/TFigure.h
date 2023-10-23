@@ -17,6 +17,7 @@ protected:
 public:
 	TFigure(Color, char, int);
 	virtual bool OnBoard();
+	virtual bool OnBoard(int x, int y);
 	virtual bool Empty(Board&);
 	virtual int Count(Color color);
 	virtual void AddAtack(Board&);

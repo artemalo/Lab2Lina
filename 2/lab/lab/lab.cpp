@@ -3,6 +3,7 @@
 #include <vector>
 #include "TFigure.h"
 #include "TPawn.h"
+#include "THorse.h"
 #define MAX 32
 #define filename "figures.txt"
 
@@ -30,6 +31,8 @@ int main()
 		cout << type << " " << color << " " << x << " " << y << endl;
 		if (type == "Pawn")
 			piece = new TPawn(color, x, y);
+		else if (type == "Horse")
+			piece = new THorse(color, x, y);
 
 		if (piece)
 		{
@@ -50,8 +53,8 @@ int main()
 		figures[i]->AddAtack(board);
 	}
 
-	cout << figures[0]->Count(black) << " - Black Pawn" << endl;
-	cout << figures[0]->Count(white) << " - White Pawn" << endl;
+	//cout << figures[0]->Count(black) << " - Black Pawn" << endl;
+	//cout << figures[0]->Count(white) << " - White Pawn" << endl;
 
 	board.PrintBoard();
 

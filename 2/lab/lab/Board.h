@@ -5,6 +5,7 @@ class Board
 {
 	friend class TFigure;
 	friend class TPawn;
+	friend class THorse;
 private:
 	bool boardAtack[LEN][LEN];
 	int board[LEN][LEN];

@@ -3,3 +3,4 @@ Pawn white a 2
 Pawn white a 3
 Pawn white a 1
 Pawn black g 4
+Horse black d 5

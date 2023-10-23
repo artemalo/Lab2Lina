@@ -17,6 +17,10 @@ bool TFigure::OnBoard()
 {
 	return (this->x >= 0 && this->x < LEN) && (this->y >= 0 && this->y < LEN);
 }
+bool TFigure::OnBoard(int x, int y)
+{
+	return (x >= 0 && x < LEN) && (y >= 0 && y < LEN);
+}
 
 bool TFigure::Empty(Board& board)
 {

@@ -130,11 +130,13 @@
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="lab.cpp" />
     <ClCompile Include="TFigure.cpp" />
+    <ClCompile Include="THorse.cpp" />
     <ClCompile Include="TPawn.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Board.h" />
     <ClInclude Include="TFigure.h" />
+    <ClInclude Include="THorse.h" />
     <ClInclude Include="TPawn.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
