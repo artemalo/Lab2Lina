@@ -1,0 +1,5 @@
+Pawn black a 1
+Pawn white a 2
+Pawn white a 3
+Pawn white a 1
+Pawn black g 4
