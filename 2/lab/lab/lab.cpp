@@ -76,13 +76,18 @@ int main()
 		cout << "White king (x, y): ";
 		cin >> x >> y;
 	} while (!figures[0]->Empty(board, x, y));
-	TKing(white, x, y);
+	TKing WKing(white, x, y);
+	WKing.AddFigure(board);
 
 	board.PrintBoard();
 
 	cout << endl;
 
 	board.PrintBoardAtack();
+
+	cout << endl;
+
+	WKing.Situation(board);
 
 	/*for (TFigure *piece:figures)
 	{

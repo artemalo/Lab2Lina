@@ -50,3 +50,60 @@ int TKing::Count(Color color)
 	else
 		return b_count;
 }
+
+void TKing::Situation(Board& board)
+{
+	int kPoint = 0;
+	int kAtack = 0;
+	if (OnBoard(this->x, this->y + 1))
+	{
+		++kPoint;
+		if (board.boardAtack[this->x][this->y + 1]) ++kAtack;
+	}
+	if (OnBoard(this->x + 1, this->y + 1))
+	{
+		++kPoint;
+		if (board.boardAtack[this->x + 1][this->y + 1]) ++kAtack;
+	}
+	if (OnBoard(this->x + 1, this->y))
+	{
+		++kPoint;
+		if (board.boardAtack[this->x + 1][this->y]) ++kAtack;
+	}
+	if (OnBoard(this->x + 1, this->y - 1))
+	{
+		++kPoint;
+		if (board.boardAtack[this->x + 1][this->y - 1]) ++kAtack;
+	}
+	if (OnBoard(this->x, this->y - 1))
+	{
+		++kPoint;
+		if (board.boardAtack[this->x][this->y - 1]) ++kAtack;
+	}
+	if (OnBoard(this->x - 1, this->y - 1))
+	{
+		++kPoint;
+		if (board.boardAtack[this->x - 1][this->y - 1]) ++kAtack;
+	}
+	if (OnBoard(this->x - 1, this->y))
+	{
+		++kPoint;
+		if (board.boardAtack[this->x - 1][this->y]) ++kAtack;
+	}
+	if (OnBoard(this->x - 1, this->y + 1))
+	{
+		++kPoint;
+		if (board.boardAtack[this->x - 1][this->y + 1]) ++kAtack;
+	}
+
+	if (kPoint == kAtack)
+		if (board.boardAtack[this->x][this->y])
+			std::cout << "Checkmate" << std::endl;
+		else
+			std::cout << "Pat" << std::endl;
+	else
+		if (board.boardAtack[this->x][this->y])
+			std::cout << "Check" << std::endl;
+		else
+			std::cout << "Nothing" << std::endl;
+}
